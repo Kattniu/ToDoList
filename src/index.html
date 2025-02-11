@@ -1,32 +1,41 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Event Finder and Social Calendar</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Guide in Italy</title>
+    <link rel="stylesheet" href="css/base.css">
 </head>
 <body>
-  <header>
-    <h1>Event Finder and Social Calendar</h1>
-    <p>Descubre eventos locales y organiza tu vida social</p>
-  </header>
+    <header>
+        <h1>Welcome to the Tourism Guide in Italy</h1>
+    </header>
+    
+    <section>
+        <h2>Search Events and Weather</h2>
+        <form id="searchForm">
+            <input type="text" id="city" placeholder="Enter a city in Italy" required>
+            <button type="submit">Search</button>
+        </form>
+    </section>
 
-  <!-- Buscador de eventos -->
-  <section id="search-section">
-    <input type="text" id="search-input" placeholder="Busca eventos...">
-    <button id="search-button">Buscar</button>
-  </section>
+    <section id="events">
+        <h3>Events in the City</h3>
+        <div id="eventList"></div>
+    </section>
 
-  <!-- Listado de eventos -->
-  <section id="events-list"></section>
+    <section id="weather">
+        <h3>Weather in the City</h3>
+        <div id="weatherInfo"></div>
+    </section>
 
-  <!-- Mapa interactivo -->
-  <section id="map"></section>
+    <footer>
+        <p>&copy; 2025 Tourism in Italy</p>
+    </footer>
 
-  <script src="api.js"></script>
-  <script src="calendar.js"></script>
-  <script src="event.js"></script>
-  <script src="app.js"></script>
+    <!-- Include each JavaScript file -->
+    <script src="js/ciudad.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/events.js"></script>
 </body>
 </html>
