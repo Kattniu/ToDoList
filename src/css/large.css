@@ -1,0 +1,14 @@
+@media (min-width: 750px) {
+    ul.menuLinks  {
+        display: flex; /* Muestra el menú en línea para pantallas más grandes */
+        flex-direction: row;
+        position: static; /* Restaura el flujo normal del diseño */
+        box-shadow: none;
+        padding: 0;
+    }
+
+    #myButton {
+        display: none; /* Oculta el botón hamburguesa en pantallas grandes */
+    }
+
+}
