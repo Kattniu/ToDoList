@@ -1,0 +1,117 @@
+
+
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+  }
+  
+  /* Contact Form Styles */
+  .contact-form {
+    text-align: center;
+  }
+  
+  .contact-form h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-form p {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 2rem;
+  }
+  
+  form {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+  
+  form button {
+    padding: 12px 25px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #45a049;
+  }
+  
+  form button:active {
+    background-color: #3e8e41;
+  }
+  
+  form button:focus {
+    outline: none;
+  }
+  
+  form input,
+  form textarea {
+    box-sizing: border-box;
+  }
+  
+  /* Optional mobile responsiveness 
+  @media (max-width: 600px) {
+    main {
+      padding: 1rem;
+    }
+  
+    .contact-form h2 {
+      font-size: 1.5rem;
+    }
+  
+    .contact-form p {
+      font-size: 1rem;
+    }
+  
+    .form-group input,
+    .form-group textarea {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  
+    form button {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }
+  */

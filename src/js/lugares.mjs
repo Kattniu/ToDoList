@@ -1,8 +1,6 @@
-// Ruta al archivo JSON
 const url = './data/members.json';
-
 // Función para obtener datos del JSON
-async function getMembersData(url) {
+export async function getMembersData(url) {
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -17,7 +15,7 @@ async function getMembersData(url) {
 }
 
 // Función para mostrar los miembros en el DOM
-function displayMembers(members) {
+export function displayMembers(members) {
   const display = document.querySelector("#cards");
   display.innerHTML = ""; // Limpiar el contenedor
   
@@ -68,29 +66,30 @@ function displayMembers(members) {
     display.appendChild(card);
   });
 }
-
 // Configuración de los botones de cambio de vista y carga inicial de datos
-document.addEventListener('DOMContentLoaded', () => {
-  const gridbutton = document.querySelector("#grid");
-  const listbutton = document.querySelector("#list");
-  const display = document.querySelector("#cards");
+export function setupViewButtons() {
+  document.addEventListener('DOMContentLoaded', () => {
+    const gridbutton = document.querySelector("#grid");
+    const listbutton = document.querySelector("#list");
+    const display = document.querySelector("#cards");
 
-  if (gridbutton && listbutton && display) {
-    // Vista Grid
-    gridbutton.addEventListener("click", () => {
-      display.classList.add("grid");
-      display.classList.remove("list");
-    });
+    if (gridbutton && listbutton && display) {
+      // Vista Grid
+      gridbutton.addEventListener("click", () => {
+        display.classList.add("grid");
+        display.classList.remove("list");
+      });
 
-    // Vista Lista
-    listbutton.addEventListener("click", () => {
-      display.classList.add("list");
-      display.classList.remove("grid");
-    });
-  } else {
-    console.error("No se encontraron los elementos necesarios (botones o contenedor).");
-  }
+      // Vista Lista
+      listbutton.addEventListener("click", () => {
+        display.classList.add("list");
+        display.classList.remove("grid");
+      });
+    } else {
+      console.error("No se encontraron los elementos necesarios (botones o contenedor).");
+    }
   
-  // Cargar datos del JSON
-  getMembersData(url);
-});
+    // Cargar datos del JSON
+    getMembersData(url);
+  });
+}

@@ -164,20 +164,20 @@ body{
   color: #ffffff;
 }
 
-/*HEADER: Base styles for the header */
+/*HEADER: Base styles for the header--------------- */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px 10px;
   background-color: var(--accent-color);
-  border-bottom: 2px solid #ccc;
   position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 5px var(--shadow-medium);
 }
 header img.logo {
+  max-width: 50%;
   border-radius: 50%;
   margin: 1rem;
 }
@@ -187,10 +187,8 @@ header h1 {
   gap: 10px;
   font-family: "Kanit", serif;
   color: var(--light-gray);
-  font-size:2rem;
   margin: 0;
 }
-/*Index: menu */
 nav {
   position: relative;
 }
@@ -240,7 +238,6 @@ content: "\2630";
 font-size: 2rem; 
 color: var(--light-gray);
   }
-
 /*INDEX : MAIN  */
 main{
   line-height: 1.6;
