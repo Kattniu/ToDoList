@@ -3,52 +3,52 @@
       {
         "name": "Colosseum",
         "location": "Rome, Italy",
-        "imageUrl": "images/colosseum.webp"
+        "imageUrl": "images/coloseo.webp"
       },
       {
         "name": "Leaning Tower of Pisa",
         "location": "Pisa, Italy",
-        "imageUrl": "images/leaning_tower.webp"
+        "imageUrl": "images/torre.webp"
       },
       {
         "name": "Venice Grand Canal",
         "location": "Venice, Italy",
-        "imageUrl": "images/grand_canal.webp"
+        "imageUrl": "images/venezia.webp"
       },
       {
         "name": "Florence Cathedral (Duomo)",
         "location": "Florence, Italy",
-        "imageUrl": "images/florence_duomo.webp"
+        "imageUrl": "images/florence.webp"
       },
       {
         "name": "Pompeii Ruins",
         "location": "Pompeii, Italy",
-        "imageUrl": "images/pompeii.webp"
+        "imageUrl": "images/pompeya.webp"
       },
       {
         "name": "Milan Cathedral (Duomo di Milano)",
         "location": "Milan, Italy",
-        "imageUrl": "images/milan_duomo.webp"
+        "imageUrl": "images/milano.webp"
       },
       {
         "name": "Trevi Fountain",
         "location": "Rome, Italy",
-        "imageUrl": "images/trevi_fountain.webp"
+        "imageUrl": "images/trevi.webp"
       },
       {
         "name": "Amalfi Coast",
         "location": "Campania, Italy",
-        "imageUrl": "images/amalfi_coast.webp"
+        "imageUrl": "images/amalllf.jpeg"
       },
       {
         "name": "Cinque Terre",
         "location": "Liguria, Italy",
-        "imageUrl": "images/cinque_terre.webp"
+        "imageUrl": "images/cinque.webp"
       },
       {
         "name": "Vatican Museums",
         "location": "Vatican City",
-        "imageUrl": "images/vatican_museums.webp"
+        "imageUrl": "images/vaticano.webp"
       }
     ]
   }
