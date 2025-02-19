@@ -1,10 +1,12 @@
 :root{
   --blanco :white;
   --negro:#121212 ;
+  --azulmarino: #10161e;
   --verde:#008C45;
   --verdepino: #1B4D3E;
   --verdejade: #00A86B;
   --verdebosque:#0B3D02;
+  --grigio:rgb(103, 100, 100);
   --verdeesmeralda: #007F5F;
   --dorado: #E6B400;
   --grisclaro:#D9D9D9;
@@ -19,6 +21,7 @@
   --footer-bg: #121212;            /* Footer más oscuro */
   --card-bg: rgba(255, 255, 255, 0.1); /* Fondo translúcido para secciones */
 }
+
 *{
   font-family: "Roboto Flex", sans-serif;
   line-height: 1.6;
@@ -69,7 +72,7 @@ body{
 /*------------- Individual cards - estilizamos  :)  */
 .grid section {
   text-align: center;
-  background-color: #10161e; 
+  background-color:var(--azulmarino); 
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(192, 190, 190, 0.2); /* Sombra para destacar */
@@ -96,22 +99,12 @@ body{
   font-size: 0.9rem;
   margin: 0.2rem 0 ;
 }
-.grid a {  /*sitio web*/
-  text-decoration: none;
-  font-weight: bold;
-  color: #8aa3b6; /* Azul claro */
-  transition: color 0.3s ease;
-}
-.grid a:hover { 
-  color: #ffffff; /* Cambia a blanco al pasar sobre "sitio web"*/
-}
 /*---------------Styling for the list view */
 .list {
   display: flex;/*RECUERDA: flex es la mejor forma para organizar el contenido en una filo O columna */
   flex-direction: column; /*Dedinimos la direccion principal que sera una columna, uno debajo del otro*/
   gap: 1rem; /* Espaciado entre elementos */
   padding: 3rem;
-  background-color: #253144; 
   border-radius: 10px;
 }
 .list section {
@@ -122,41 +115,30 @@ body{
   justify-content: space-between;
   gap: 1rem; /* Espaciado entre elementos */
   padding: 1rem;
-  background-color: #1e293b; /* Azul oscuro */
+  background-color:var(--azulmarino); /* Azul oscuro */
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra ligera */
-  color: #d1e7fd;
+  color: var(--background-light);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .list section:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 8px rgba(100, 100, 100, 0.4);
 }
 .list img {
-  max-width: 50px;
+  max-width: 100px;
   height: auto;
-  border-radius: 50%;
-  border: 2px solid var(--border-color);
+  border: 2px solid var(--grisclaro);
 }
 .list h2 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 0;
-
 }
 .list p {
   font-size: 0.9rem;
   margin: 0;
+  padding: 10px;
 }
-.list a {
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-.list a:hover {
-  color: #ffffff;
-}
-
-
 /*INDEX : MAIN imagen y boton*/
 .index{
 background-color: var(--background-color);
@@ -208,7 +190,7 @@ header {
   justify-content: space-between; /* Espacio entre logo, h1, y menú */
   padding: 1rem 2rem; /* Espaciado interno */
   gap: 1rem; /* Espaciado entre elementos */
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 header img.logo {
   max-width: 80px; /* Tamaño de mi logo */
@@ -279,10 +261,10 @@ ul.menuLinks a:hover {
 }
 /*FOOTER  ---------------------------- */
 footer {
-  background: var(--border-color);
+  margin-top: 5rem;
+  color: var(--grigio);
   padding: 20px;
   text-align: center;
-  border-top: 2px solid var(--dorado);
 }
 .footer-container {
   max-width: 1200px;
@@ -300,14 +282,15 @@ footer {
   text-align: left;
 }
 .footer-social h3, .footer-contact h3 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
 }
 .footer-social .social-icons {
   display: flex;
   gap: 0.5rem;
 }
 .footer-social .social-icons a img {
+  background-color: var(--border-color);
   width: 32px;
   height: 32px;
   transition: transform 0.3s ease, filter 0.3s ease;
@@ -317,20 +300,21 @@ footer {
   filter: brightness(1.5);
 }
 .footer-contact p {
-  margin: 0.5rem 0;
+  margin: 0.2rem 0;
+  font-size: 0.8rem;
 }
 .footer-contact a {
-  color:var(--background-color);
   font-weight: bold;
   text-decoration: none;
+  color: var(--verdeesmeralda);
 }
 .footer-contact a:hover {
   text-decoration: underline;
 }
 .footer-info {
   flex-basis: 100%;
-  margin-top: 1rem;
-  font-size: 0.9rem;
+  margin-top: 0.1rem;
+  font-size: 0.7rem;
 }
 /*CITIES PAGE */
 .main-cities{
