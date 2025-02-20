@@ -32,33 +32,40 @@
 </header>
 <main class="main"> 
 <section class="contact-form">
-    <h2>Customer Service</h2>
-    <p>Need assistance? Leave us your message and we'll get back to you.</p>
-  
-    <form id="contactForm" action="mailto:kathe.adriana24@gmail.com" method="POST" enctype="multipart/form-data">
-      <div class="form-group">
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required placeholder="Your full name">
-      </div>
+  <h2>Customer Service 📞</h2>
+        <p>Need assistance? Leave us your message and we'll get back to you.</p>
       
-      <div class="form-group">
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required placeholder="Your email address">
+        <form id="contactForm" method="POST">
+          <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Your full name">
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required placeholder="Your email address">
+          </div>
+      
+          <div class="form-group">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required placeholder="Your inquiry subject">
+          </div>
+      
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Write your message here"></textarea>
+          </div>
+      
+          <button type="submit">Send Message</button>
+              <div id="successModal" class="modal">
+          <div class="modal-content">
+              <p>Message sent successfully!🎊</p>
+              <button id="closeModal">OK</button>
+          </div>
       </div>
-  
-      <div class="form-group">
-        <label for="subject">Subject:</label>
-        <input type="text" id="subject" name="subject" required placeholder="Your inquiry subject">
-      </div>
-  
-      <div class="form-group">
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required placeholder="Write your message here"></textarea>
-      </div>
-  
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+        </form>
+    </section>
+
 </main>
 <footer>
   <div class="footer-container">
@@ -80,8 +87,9 @@
       </div>
   </div>
 </footer>
-<script src="../js/contact.js"></script>
+<script type="module" src="../js/contact.js"></script>
 <script type="module" src="../js/script.js"></script>
+
 </body>
 </html>
 

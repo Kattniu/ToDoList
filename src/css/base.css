@@ -8,6 +8,7 @@
   --verdebosque:#0B3D02;
   --grigio:rgb(103, 100, 100);
   --verdeesmeralda: #007F5F;
+  --celeste:#509cff;
   --dorado: #E6B400;
   --grisclaro:#D9D9D9;
   --rojoborgo:#B22222;
@@ -99,7 +100,7 @@ body{
   font-size: 0.9rem;
   margin: 0.2rem 0 ;
 }
-/*---------------Styling for the list view */
+/* -------- Styling for the list view --------------- */
 .list {
   display: flex;/*RECUERDA: flex es la mejor forma para organizar el contenido en una filo O columna */
   flex-direction: column; /*Dedinimos la direccion principal que sera una columna, uno debajo del otro*/
@@ -173,7 +174,7 @@ background-color: var(--background-color);
   transition: background-color 0.3s ease;
 }
 .boton-hero-join:hover {
-  background-color: #509cff;
+  background-color: var(--celeste);
 }
 /* INDEX: contenedor del weather*/
 .event-weather-container {
@@ -316,146 +317,169 @@ footer {
   margin-top: 0.1rem;
   font-size: 0.7rem;
 }
-/*CITIES PAGE */
-.main-cities{
-  background-color: var(--grisclaro);
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(180, 176, 176, 0.2); /* Sombra */
-  color: var(--text-dark);  
-  padding: 40px;
+
+/*-----CITIES PAGE------------------------- */
+.main-cities {
+  background-color: var(--verdepino);
   border-radius: 10px;
-  max-width: 800px;
-  margin: 50px auto;
+  box-shadow: 0 4px 6px rgba(180, 176, 176, 0.2);
+  color: var(--background-light);  
+  padding: 20px;
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
 }
-#searchForm form {
+.main-cities h1 {
+  color: var(--primary-hover);
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-bottom: 15px;
+}
+#searchForm {
   display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
-input {
-  border: 2px solid var(--verdejade);
-  color: var(--verdebosque);
+#searchForm input {
+  width: 90%;
+  max-width: 300px;
   padding: 10px;
-  border: none;
+  border: 2px solid var(--verdebosque);
   border-radius: 5px;
-  width: 60%;
+  font-size: 1rem;
 }
-.boton-search{
-  padding: 12px 18px;
-    background: var(--verdejade);
-    color: var(--background-light);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    font-weight: bold;
-    gap: 10px;
-} 
-.boton-search:hover{
-  background: var(--rojoborgo);
-  transform: scale(1.1);
-  filter: brightness(1.2);
+.boton-search {
+  background-color: var(--celeste);
+  color: var(--azulmarino);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 200px;
+  padding: 10px 15px;
+  font-size: 1rem;
 }
-/* Sección de eventos y clima */
+
+/* Sections (Events & Weather) */
 #events, #weather {
   margin-top: 20px;
 }
 
 #eventList, #weatherInfo {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
 }
 
-.card {
-  background: rgba(255, 255, 255, 0.9);
-  color: #333;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
-}
 /*FORM PAGINA------------------------------*/
-.contact-form p {
-  font-size: 1.2rem;
-  color: #777;
-  margin-bottom: 2rem;
-}
-#contactForm form {
-  display: grid;
-  gap: 1.5rem;
+.contact-form {
+  padding: 1.5rem;
+  text-align: center;
 }
 
-.form-group {
+.contact-form h2 {
+  font-size: 1.5rem;
+  color:var(--verdeesmeralda);
+  margin-bottom: 1rem;
+}
+
+.contact-form p {
+  font-size: 1rem;
+  color: var(--grigio);
+  margin-bottom: 1.5rem;
+}
+
+/* Form structure */
+#contactForm {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  gap: 1rem;
 }
 
+/* Form fields */
+.form-group {
+  text-align: left;
+}
 .form-group label {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: #333;
+  font-size: 1rem;
+  color: var(--background-light);
 }
-
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   font-size: 1rem;
-  border: 1px solid #ccc;
+  border: 2px solid var(--verdebosque);
   border-radius: 5px;
   box-sizing: border-box;
-  transition: border-color 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #4CAF50;
+  border-color: var(--primary-color);
   outline: none;
 }
 
+/* Button */
 #contactForm button {
   padding: 12px 25px;
-  background-color: #4CAF50;
-  color: #fff;
+  background-color: var(--primary-hover);
+  color: white;
   font-size: 1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 #contactForm button:hover {
-  background-color: #45a049;
+  background-color:var(--rojoborgo);
 }
 
-#contactForm button:active {
-  background-color: #3e8e41;
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
 }
 
-#contactForm button:focus {
-  outline: none;
+.modal-content {
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 8px;
 }
 
-#contactForm input,
-#contactForm textarea {
-  box-sizing: border-box;
+/* Make form smaller in mobile */
+@media (max-width: 600px) {
+  .main {
+      padding: 1rem;
+  }
+
+  .contact-form {
+      padding: 1rem;
+  }
+
+  #contactForm button {
+      font-size: 0.9rem;
+      padding: 10px 20px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+      font-size: 0.9rem;
+      padding: 8px;
+  }
 }
-.main{
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin-bottom: 2rem;
-}
+
+
