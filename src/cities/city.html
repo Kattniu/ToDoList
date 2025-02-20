@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Road+Rage&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIo5Ygi4GBy9IsjgELzRUjwprgf7dseGU&callback=initMap&libraries=maps,marker"></script>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/large.css">
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
@@ -31,6 +32,7 @@
         </ul>
     </nav>
 </header>
+
 <main class="main-cities">
     <h1>Welcome to the Tourism Guide in Italy </h1>
     <section>
@@ -40,15 +42,18 @@
             <button class="boton-search" type="submit">Search 🔎</button>
         </form>
     </section>
-
+    <section id="weather">
+        <h3>Weather in the City ☀️</h3>
+        <div id="weatherInfo"></div>
+    </section>
     <section id="events">
         <h3>Events in the City 📆</h3>
         <div id="eventList"></div>
     </section>
-
-    <section id="weather">
-        <h3>Weather in the City ☀️</h3>
-        <div id="weatherInfo"></div>
+    <img src="../images/trevi.webp" class="italy-image" alt="Italy"  loading="lazy">
+    <section id="mapSection">
+        <h3>📍 Location on Map</h3>
+        <div id="map" style="height: 400px; width: 100%;"></div>
     </section>
 </main>
 <footer>

@@ -15,7 +15,7 @@ export async function getEvents(city) {
         if (data.events && data.events.length > 0) {
             return data.events.map(event => `<p>${event.name} - ${event.date}</p>`).join('');
         } else {
-            return 'No se encontraron eventos';
+            return 'No events found please try again later 😥';
         }
     } catch (error) {
         console.error('Error al obtener eventos:', error);

@@ -1,15 +1,21 @@
 import { getWeather } from './weather.mjs';
 import { getEvents } from './events.mjs';
-document.getElementById('searchForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  const city = document.getElementById('city').value;
-  // Llamar a las funciones de clima y eventos
-  getWeather(city).then(weatherInfo => {
-    document.getElementById('weatherInfo').innerHTML = weatherInfo;
-  });
+import { loadMap } from './maps.mjs';
 
-  getEvents(city).then(eventList => {
-    document.getElementById('eventList').innerHTML = eventList;
-  });
+document.getElementById('searchForm').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const city = document.getElementById('city').value.trim();
+
+    if (city) {
+        // Obtener eventos
+        const eventsHTML = await getEvents(city);
+        document.getElementById('eventList').innerHTML = eventsHTML;
+
+        // Obtener clima
+        const weatherHTML = await getWeather(city);
+        document.getElementById('weatherInfo').innerHTML = weatherHTML;
+
+        // Cargar el mapa
+        loadMap(city);
+    }
 });

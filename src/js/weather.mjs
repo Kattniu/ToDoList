@@ -8,14 +8,14 @@ export async function getWeather(city) {
         const data = await response.json();
         
         if (data.cod === '404') {
-            return '<p>Ciudad no encontrada</p>';
+            return '<p>city ​​not found😥</p>';
         } else {
             const iconCode = data.weather[0].icon; // Código del ícono del clima
             const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`; // URL del ícono
 
             return `
-                <p>Temperatura: ${data.main.temp} °C</p>
-                <p>Condiciones: ${data.weather[0].description}</p>
+                <p>Temperature: ${data.main.temp} °C</p>
+                <p>Conditions: ${data.weather[0].description}</p>
                 <img src="${iconUrl}" alt="Weather icon">
             `;
         }

@@ -141,7 +141,7 @@ body{
   margin: 0;
   padding: 10px;
 }
-/*INDEX : MAIN imagen y boton*/
+/*INDEX : MAIN imagen y boton-----------------------------------------------------*/
 .index{
 background-color: var(--background-color);
 }
@@ -177,7 +177,7 @@ background-color: var(--background-color);
 .boton-hero-join:hover {
   background-color: var(--celeste);
 }
-/* INDEX: contenedor del weather*/
+/* INDEX: contenedor del weather-------------------------------------------------*/
 .event-weather-container {
   display: grid;
   grid-template-columns:1fr;
@@ -351,6 +351,15 @@ footer {
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin-bottom: 15px;
 }
+.italy-image{
+  width:50%; 
+  height: auto; /* Mantiene la proporción de la imagen */
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+  border-radius: 10px; /* Bordes redondeados opcionales */
+  display: block;
+  margin: 0 auto; /* Centra la imagen */
+}
+
 #searchForm {
   display: flex;
   flex-direction: column;
@@ -386,6 +395,12 @@ footer {
   gap: 10px;
   align-items: center;
   text-align: center;
+}
+#weatherInfo p{
+  padding: 0;
+  margin: 0;
+  font-size: 1.2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /*FORM PAGINA------------------------------*/
