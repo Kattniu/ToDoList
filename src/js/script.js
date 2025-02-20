@@ -12,9 +12,3 @@ document.getElementById("year").textContent = new Date().getFullYear();
 // Mostrar la última modificación de la página
 document.getElementById("lastModified").textContent = document.lastModified;
 
-
-
-
-document.querySelector('.logo').addEventListener('click', function() {
-    window.location.href = 'index.html';
-});
